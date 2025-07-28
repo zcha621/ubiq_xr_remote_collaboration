@@ -721,6 +721,16 @@ export class Room {
         this.properties = new PropertyDictionary()
         this.blobs = {}
     }
+    // Broadcast server message to all peers in this room
+    broadcastServerMessage(messageType: string, args: any): void {
+        this.peers.forEach(peer => {
+            peer.send(Message.Create(peer.getNetworkId(), {
+                type: messageType,
+                args: JSON.stringify(args)
+            }))
+        })
+        console.log(`Room ${this.name}: Broadcasted ${messageType} to ${this.peers.length} peers`)
+    }
 
     broadcastPeerProperties (peer: RoomPeer, keys: string[], values: any[]): void {
         this.peers.forEach(otherpeer => {

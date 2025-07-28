@@ -3,11 +3,28 @@
     {
         "tcp":
         {
-            "uri": "localhost"
+            "uri": "localhost",
+            "port": 8009
         },
         "wss":
         {
-            "uri": "localhost"
+            "uri": "localhost",
+            "port": 8010,
+            "cert": "./cert.pem",
+            "key": "./key.pem"
         }
-    }
+    },
+    "status":
+    {
+        "port": 8011,
+        "cert": "./cert.pem",
+        "key": "./key.pem",
+        "apikeys": []
+    },
+    "iceservers":
+    [
+        {
+            "uri" : "stun:stun.l.google.com:19302"
+        }
+    ]
 }

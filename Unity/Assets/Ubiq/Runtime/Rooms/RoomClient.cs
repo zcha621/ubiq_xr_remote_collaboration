@@ -6,6 +6,7 @@ using Ubiq.Networking;
 using Ubiq.Rooms.Messages;
 using Ubiq.XR.Notifications;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
@@ -20,6 +21,7 @@ namespace Ubiq.Rooms
     [RequireComponent(typeof(NetworkScene))]
     public class RoomClient : MonoBehaviour
     {
+        
         // These are the messages defined by the RoomClient/RoomServer pair.
         // These should match exactly the schema in the RoomServer.
 
@@ -218,6 +220,7 @@ namespace Ubiq.Rooms
         /// </summary>
         public RoomsEvent OnRooms = new RoomsEvent();
 
+        public UnityEvent<ReferenceCountedSceneGraphMessage> OnRoomMessage = new UnityEvent<ReferenceCountedSceneGraphMessage>();
         /// <summary>
         /// A list of all the Peers in the Room. This does not include the local Peer, Me.
         /// </summary>
@@ -261,7 +264,7 @@ namespace Ubiq.Rooms
         // Avoid garbage by re-using the lists in these messages
         private AppendPeerPropertiesArgs _appendPeerPropertiesArgs = new AppendPeerPropertiesArgs();
         private AppendRoomPropertiesArgs _appendRoomPropertiesArgs = new AppendRoomPropertiesArgs();
-
+        
         public class TimeoutNotification : Notification
         {
             private RoomClient client;
@@ -488,6 +491,7 @@ namespace Ubiq.Rooms
 
         protected void ProcessMessage(ReferenceCountedSceneGraphMessage message)
         {
+            OnRoomMessage?.Invoke(message);
             var container = JsonUtility.FromJson<Message>(message.ToString());
             switch (container.type)
             {
