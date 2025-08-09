@@ -8,15 +8,25 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/XRRemoteCollaboration/Scenes/xr_remote_collaboration.unity
     guid: 0bc2ffa321ce0b44ba16b454781672ee
-  - enabled: 1
+  - enabled: 0
     path: Assets/Ubiq/Samples/Demo (XRI)/Demo.unity
     guid: 2de505d34345ab340bdde30d419b24eb
+  - enabled: 0
+    path: Assets/Samples/Unity Render Streaming/3.1.0-exp.9/Example/Receiver/Receiver.unity
+    guid: d6a3fc68a1f7c05429fd88cc859bfaa1
+  - enabled: 1
+    path: Assets/Samples/Unity Render Streaming/3.1.0-exp.9/Example/Broadcast/Broadcast.unity
+    guid: f47df8540d2ee994196abbd7365855f2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5b0e9fd88d548394d96f2176c52d5a89,
       type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 5a1428b16d224ac44a5b5cfc7281928e,
       type: 2}
     WebXR.Settings: {fileID: 11400000, guid: 4de9d1f035a67194c99a05b4d748f166, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 6395bbc54f99b934aa44bcceb4655be0,
+      type: 2}
+    com.unity.renderstreaming.settings: {fileID: 11400000, guid: 039337c008e9a5c44a60f957eae3e450,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 588c574ac0597b842b0b9beef4c56aa2,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 382a980d7f7b2b746888eb8a23f35225,

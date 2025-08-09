@@ -82,3 +82,7 @@ Recordings/
 .vsconfig
 
 .idea/
+
+
+
+/[Aa]ssets/[Ss]amples/*
