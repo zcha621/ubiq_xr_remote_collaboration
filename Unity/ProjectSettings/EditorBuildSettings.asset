@@ -18,17 +18,17 @@ EditorBuildSettings:
     path: Assets/Samples/Unity Render Streaming/3.1.0-exp.9/Example/Broadcast/Broadcast.unity
     guid: f47df8540d2ee994196abbd7365855f2
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5b0e9fd88d548394d96f2176c52d5a89,
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 093deb9e0b8b08e4d8ab2c1b42f6fa0b,
       type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 5a1428b16d224ac44a5b5cfc7281928e,
       type: 2}
-    WebXR.Settings: {fileID: 11400000, guid: 4de9d1f035a67194c99a05b4d748f166, type: 2}
+    WebXR.Settings: {fileID: 11400000, guid: 415688e0c57efac42a462d513d683e08, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 6395bbc54f99b934aa44bcceb4655be0,
       type: 2}
     com.unity.renderstreaming.settings: {fileID: 11400000, guid: 039337c008e9a5c44a60f957eae3e450,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 588c574ac0597b842b0b9beef4c56aa2,
       type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 382a980d7f7b2b746888eb8a23f35225,
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 313ae43b654806d46ae49696e9e3405c,
       type: 2}
   m_UseUCBPForAssetBundles: 0
